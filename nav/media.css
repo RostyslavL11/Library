@@ -1,58 +1,57 @@
 @media (max-width: 35em) {
-    .wrapper {
-        background-image: url('img/background-home-mobile.jpg');
-    }
+	.wrapper {
+		background-image: url('img/background-home-mobile.jpg');
+	}
 
-    .primary-navigation {
-        --gap: 2em;
+	.primary-navigation {
+		--gap: 2em;
 
-        position: fixed;
-        z-index: 100;
-        inset: 0 0 0 30%;
+		position: fixed;
+		z-index: 100;
+		inset: 0 0 0 30%;
 
-        flex-direction: column;
-        padding: min(30vh, 10rem) 2em;
+		flex-direction: column;
+		padding: min(30vh, 10rem) 2em;
 
-        transform: translateX(100%);
-        transition: transform 350ms ease-out;
-    }
+		transform: translateX(100%);
+		transition: transform 350ms ease-out;
+	}
 
-    .primary-navigation[data-visible="true"] {
-        transform: translateX(0%);
+	.primary-navigation[data-visible="true"] {
+		transform: translateX(0%);
 
-    }
+	}
 
-    .mobile-nav-toggle {
-        display: block;
-        position: absolute;
-        z-index: 1000;
-        background-color: transparent;
-        background-image: url('../icons/icon-hamburger.svg');
-        background-repeat: no-repeat;
-        width: 2rem;
-        border: 0;
-        aspect-ratio: 1;
-        top: 2rem;
-        right: 2rem;
-    }
+	.mobile-nav-toggle {
+		display: block;
+		position: absolute;
+		z-index: 1000;
+		background-color: transparent;
+		background-image: url('../icons/icon-hamburger.svg');
+		background-repeat: no-repeat;
+		width: 2rem;
+		border: 0;
+		aspect-ratio: 1;
+		top: 2rem;
+		right: 2rem;
+	}
 
-    .mobile-nav-toggle[aria-expanded="true"] {
-        background-image: url('../icons/icon-close.svg');
-    }
+	.mobile-nav-toggle[aria-expanded="true"] {
+		background-image: url('../icons/icon-close.svg');
+	}
 }
 
 /* щоб забрати та прибрати цифри в меню при десктопі, планшеті, мобілці */
 @media (min-width: 35em) and (max-width: 55em) {
-    .primary-navigation a>span[aria-hidden] {
-        background: red;
-        display: none;
-    }
+	.primary-navigation a>span[aria-hidden] {
+		display: none;
+	}
 }
 
 @media (min-width: 35em) {
-    .primary-navigation {
-        --gap: clamp(1.5rem, 5vw, 3rem);
-        padding-block: 2rem;
-        padding-inline: clamp(3rem, 7vw, 10rem);
-    }
+	.primary-navigation {
+		--gap: clamp(1.5rem, 5vw, 3rem);
+		padding-block: 2rem;
+		padding-inline: clamp(3rem, 7vw, 10rem);
+	}
 }
